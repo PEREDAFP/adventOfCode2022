@@ -14,7 +14,7 @@ const resultados = new Map ([
 ]);
 
 const input = fs
-	.readFileSync(path.join('.', 'input.txt'), 'utf8')
+    .readFileSync(path.join('.', 'input.txt'), 'utf8')
     .toString()
     .trim()
   	.split('\n')
