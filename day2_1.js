@@ -17,7 +17,7 @@ const input = fs
     .readFileSync(path.join('.', 'input.txt'), 'utf8')
     .toString()
     .trim()
-  	.split('\n')
+    .split('\n')
     .reduce((ac,el) => ac += resultados.get(el),0 );
     		
 console.log(input);
