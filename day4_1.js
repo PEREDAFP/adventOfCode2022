@@ -6,12 +6,11 @@ const contiene = (lista1, lista2) =>
             ? 1 : 0
     
 const input = fs
-	.readFileSync(path.join('.', 'input.txt'), 'utf8')
+    .readFileSync(path.join('.', 'input.txt'), 'utf8')
     .trim()
 	.split('\n')
-	.map(el=>
-			el
-			.split(',')
+	.map(el=>el
+	    .split(',')
             .map(el => el
                     .split('-')
                     .map(elem => parseInt(elem,10))))
