@@ -14,15 +14,14 @@ const range = (tamano, comienzo) =>
             [...Array(tamano).keys()].map( el => el + comienzo)
        
 const input = fs
-	.readFileSync(path.join('.', 'input.txt'), 'utf8')
+    .readFileSync(path.join('.', 'input.txt'), 'utf8')
     .trim()
-	.split('\n')
-	.map(el=>
-			el
-			.split(',')
-            .map(el => el
-                    .split('-')
-                    .map(elem => parseInt(elem,10)))                
+    .split('\n')
+    .map(el=>el
+	.split(',')
+        .map(el => el
+                  .split('-')
+                  .map(elem => parseInt(elem,10)))                
     )                
     .map(el => contiene(el[0], el[1]))
     .reduce((ac,el)=> ac += el,0)  					 
