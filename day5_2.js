@@ -24,9 +24,9 @@ const mueve= (mov, listas) => {
   2.- Los movimientos
 */  
 const input = fs
-	.readFileSync(path.join('.', 'input.txt'), 'utf8')
+    .readFileSync(path.join('.', 'input.txt'), 'utf8')
     .toString()
-   	.split('\n\n')
+    .split('\n\n')
 
 const tableroLectura = input[0]
                 .split('\n')
@@ -50,6 +50,6 @@ const movimientos = input[1]
                     .map(el => el.split(' '))
                     //En este caso las posiciones son fijas. Pues facilito. Ojo que son string y queremos números
                     .map(el => [parseInt(el[1],10), parseInt(el[3],10),parseInt(el[5],10)])
-                    .map(el =>  mueve(el, pilas))
+                    .map(movimiento =>  mueve(movimiento, pilas))
 //Ahora mostramos los elementos que se encuentran más arriba en las distintas pilas
 console.log(pilas.reduce((ac,el)=> ac.concat(el[el.length -1 ]),[]).join(''))
